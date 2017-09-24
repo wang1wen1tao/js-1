@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>作业class01</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+     body{position: relative;}
+     span{font-size: 30px;font-weight: bold;}
+	#btn{background: red;border: 1px solid red;
+		width: 100px;height: 50px;color: #fff;}
+	#div1{width: 50px;height: 45px;border: 3px solid #000}
+	#text{font-size: 25px;font-weight: normal;}
+	#chage{width: 400px;height: 99px;border: 2px solid #000;display: none; absolute;float:right;margin-bottom: 200px}
+</style>
+<body >
+     <span>请为下列Div设置样式:</span>
+     <input type="button" id="btn" value="点击设置">
+     <div id="div1"></div>
+     <div id="chage">
+     	<div class="top">
+     		<span id="text">选择背景颜色：</span>
+            <input type="button" id="red" value="红">
+            <input type="button" id="yellow" value="黄">
+            <input type="button" id="blue" value="蓝">
+     	</div>
+     	<div class="cent">
+     		<span id="text">选择宽：</span>
+            <input type="button" id="btn1" value="200">
+            <input type="button" id="btn2" value="300">
+            <input type="button" id="btn3" value="400">
+     	</div>
+     	<div class="bottom">
+     		<span id="text">选择高：</span>
+            <input type="button" id="btn4" value="200">
+            <input type="button" id="btn5" value="300">
+            <input type="button" id="btn6" value="400">
+     	</div>
+     </div>
+     <script type="text/javascript">
+      function $(id,css){
+      	return document.getElementById(id);
+      }
+      $('btn').onclick =function(){
+        $('chage').style.display = 'block';
+      }
+      	$('red').onclick = function(){
+      	$('div1').style.background = 'red';
+      }
+      $('yellow').onclick = function(){
+      	$('div1').style.background = 'yellow';
+      }
+      $('blue').onclick = function(){
+      	$('div1').style.background = 'blue';
+      }
+       $('btn1').onclick = function(){
+      	$('div1').style.width = '200px';
+      }
+      $('btn2').onclick = function(){
+      	$('div1').style.width = '300px';
+      }
+      $('btn3').onclick = function(){
+      	$('div1').style.width = '400px';
+      }
+      $('btn4').onclick = function(){
+      	$('div1').style.height = '200px';
+      }
+      $('btn5').onclick = function(){
+      	$('div1').style.height = '300px';
+      }
+      $('btn6').onclick = function(){
+      	$('div1').style.height = '400px';
+      }
+  </script>
+</body>
+</html>
