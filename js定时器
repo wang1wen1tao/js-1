@@ -1,0 +1,17 @@
+<script type="text/javascript">
+    setInterval(function time(){
+    //获取现在年份 
+    var date = new Date();
+    var y = date.getFullYear();
+    var m = date.getMonth();
+    var d = date.getDate();
+    var h = date.getHours();
+    var mi = date.getMinutes();
+    var s = date.getSeconds();
+    var str = y + '-' + m +'-'+ d+' ' + h + ':'+mi+':'+s;
+    var Div = document.getElementById('time');
+    Div.innerHTML = str;
+    //连接时间
+    },1000);
+    //setInterval();
+</script>
