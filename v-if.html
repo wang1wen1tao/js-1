@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<script src="vue.js"></script>
+<body>
+   <div id="app">
+   	   <div v-if="role =='admin'" >
+   	   管理员您好
+   	   </div>
+   	   <div v-else>
+   	   没有权限
+   	   </div>
+   </div>
+   <script type="text/javascript">
+   	  var app3 = new Vue({
+   	  	el:"#app",
+   	  	data:{
+   	  		role:'admind'
+   	  	}
+   	  })
+   </script>
+</body>
+</html>

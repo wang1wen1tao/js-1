@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script src="vue.js"></script>
+<body>
+<div id="app">
+	<whh></whh>
+	<sdd></sdd>
+</div>
+<script type="text/javascript">
+	var Event = new Vue();
+	Vue.component('Whh',{
+          template:'<div>whaha<input type="text" v-model="i_said" @keyup="change"></div>',
+          data:function(){
+          	return{
+          		i_said:''
+          	}
+          },
+          methods:{
+          	change:function(){
+               Event.$emit('huahuasaid',this.i_said);
+          	}
+          }
+	});
+	Vue.component('sdd',{
+		template:'<div>huahuasaid{{huahuasaid}}</div>',
+		data:function(){
+			return {
+				huahuasaid:''
+			}
+		},
+		mounted:function(){
+		    var me=this;
+			Event.$on('王花花',function(data){
+                 me.huahuasaid=data;
+			})
+		}
+	})
+	new Vue({
+		el:"#app"
+	})
+</script>
+</body>
+</html>

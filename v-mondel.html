@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model.lazy="name">
+         {{name}}
+         <input type="radio" v-model="sex" value="nan">男
+          <input type="radio" v-model="sex" value="fenan">女
+          <input type="checkbox" v-model="food" value="apple">苹果
+          <input type="checkbox" v-model="food" value="orange">橘子
+          {{food}}
+          <textarea cols="10" span='3' v-model="arc"></textarea>
+	</div>
+<script type="text/javascript">
+var app = new Vue({
+	el:"#app",
+	data:{
+		name:'scsd',
+		sex:'fenan',
+		food:['apple','orange'],
+		arc:"xsxsdcsdcsdc"
+	}
+})
+</script>
+</body>
+</html>

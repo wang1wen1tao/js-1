@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+  <script src="vue.js"></script>
+ <div id="app1">
+ 	<button v-on="{mouseenter:onEnter,mouseleave:onleave}" v-on:click="onclick">点我</button>
+ 	<form v-on:keyup.enter="onsubmit" v-on:submit.prevent="onsubmit">
+ 		<input type="text">
+ 		<input type="submit" value="提交">
+ 	</form>
+ </div>
+ <script type="text/javascript">
+ 	var app1 = new Vue({
+ 		el:"#app1",
+ 		methods:{
+ 			onclick:function () {
+ 				alert("hello world");
+ 			},
+ 			onEnter:function () {
+ 				console.log("hello world");
+ 			},
+ 			onleave:function () {
+ 				console.log("ho world");
+ 			},
+ 			/*onsubmit:function(e){
+ 				e.preventDefault();
+                console.log('提交成功');
+ 			}*/
+ 			onsubmit:function(){
+                console.log('提交成功');
+ 			}
+ 		}
+ 	})
+ </script>
+</body>
+</html>

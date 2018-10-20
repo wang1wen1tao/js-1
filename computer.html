@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<script src="vue.js"></script>
+<body>
+	<div id="app">
+		 <table>
+    	<tr>
+    		<td>语文</td>
+    		<td><input type="text" v-model.number="china"></td>
+    	</tr>
+    	<tr>
+    		<td>数学</td>
+    		<td><input type="text" v-model.number="math"></td>
+    	</tr>
+    	<tr>
+    		<td>英语</td>
+    		<td><input type="text" v-model.number="English"></td>
+    	</tr>
+    	<tr>
+    		<td>总分</td>
+    		<td>{{sum}}</td>
+    	</tr>
+    	<tr>
+    		<td>平均分</td>
+    		<td>{{ave}}</td>
+    	</tr>
+    </table>
+	</div>
+    <script type="text/javascript">
+      var app = new Vue({
+      	el:"#app",
+      	data:{
+      		china:100,
+            math:120,
+            English:109
+      	},
+      	computed:{
+      		sum:function () {
+      			return this.china+this.math+this.English;
+      		},
+            ave:function(){
+            	return Math.round(this.sum/3.0);
+            }
+      	}
+      })
+</script>
+</body>
+</html>

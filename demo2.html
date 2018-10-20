@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<script src="vue.js"></script>
+<body>
+  <div id="app1">
+  	<p>Orangenal:{{msg}}</p>
+  	<p>Computed reversed message:{{revermsg}}</p>
+  </div>
+  <script type="text/javascript">
+  	var app1=new Vue({
+  		el:"#app1",
+  		data:{
+  			msg:'Hello'
+  		},
+  		computed:{
+          revermsg:function (){
+            return this.msg.split('').reverse().join('');
+          }
+  		}
+  	})
+  </script>
+</body>
+</html>

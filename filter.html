@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="vue.js"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+   <div id="app">
+   	<input type="text" v-model="price">
+   	 {{price|currentry('usd')}}
+   </div>
+   <script type="text/javascript">
+   	Vue.filter('currentry',function(val,unit){
+   		val=val || 0;
+   		unit = unit ||'元';
+      return val+unit;
+   	});
+   	new Vue({
+   		el:"#app",
+   		data:{
+   			price:10
+   		}
+   	})
+   </script>
+</body>
+</html>

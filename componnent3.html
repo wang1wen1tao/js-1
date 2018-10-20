@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<script src="vue.js"></script>
+<body>
+    <div id="app">
+    	<user username="whh"></user>
+    </div>
+</body>
+<script type="text/javascript">
+	Vue.component('user',{
+		template:'<a :href="\'/user/\'+username">@{{username}}</a>',
+		props:['username']
+	});
+	new Vue({
+		el:"#app"
+	})
+</script>
+</html>

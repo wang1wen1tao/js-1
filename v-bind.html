@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	 <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<a v-bind:href="url">点我</a>
+</div>
+<script type="text/javascript">
+       var app = new Vue({
+       	el:"#app",
+       	data:{
+       		url:'demo1.html'
+       	}
+       })	
+</script>
+</body>
+</html>

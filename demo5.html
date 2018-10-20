@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{padding: 0px;margin: 0px}
+    body{
+    	background: #ccc;
+    }
+    #app{
+    	  margin: 0px auto;
+          width: 600px;
+          height: 500px;
+          background: #fff;
+    }
+    h1{
+    	width: 600px;
+    	height: 50px;
+    	background: #9C27B0;
+    	text-align: center;
+    	color:#fff;
+    	line-height: 46px;
+    }
+    input,ul{
+    	width: 520px;
+    	height:40px;
+    	margin: 5px 40px;
+    }
+    ul li{
+    	width: 520px;
+    	height:40px;
+    	font-size:30px;
+    	list-style: none;
+    }
+    .vis{
+         text-decoration:line-through;
+    }
+</style>
+<body>
+    <div id="app">
+        <h1 v-text='title'></h1>
+        <input type="text" v-model="newitem" v-on:keyup.Enter="todo">
+        <ul>
+        	<li v-for="list in items" v-bind:class="{vis:list.isActive}" v-on:click="dofish(list)">{{list.item_name}}</li>
+        </ul>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+             var app = new Vue({
+             	el:'#app',
+             	data:{
+             		title:'todolist',
+             		items:[],
+                    newitem:''
+             	},
+             	methods:{
+                   dofish:function(item){
+                    item.isActive=!item.isActive;
+                   },
+                   todo:function(){
+                   	this.items.push({
+                   		item_name:this.newitem,isActive:false
+                   	});
+                    this.newitem='';
+                   }
+             	}
+             }) 
+    </script>
+</body>
+</html>

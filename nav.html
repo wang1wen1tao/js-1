@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>导航</title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	*{padding: 0px;margin: 0px}
+	#box{
+		width: 100%;
+	}
+	#box  ul{
+		width: 900px;
+		height: 50px;
+		margin: 0 auto;
+		background: #ccc;
+	}
+	 ul li{
+		float: left;
+		list-style: none;
+	}
+	a{
+		width: 150px;
+		height: 50px;
+        text-align: center;
+		text-decoration: none;
+		display: block;
+		line-height: 55px;
+	}
+	ul li a:hover{
+		color:#fff;
+		background: orange;
+	}
+</style>
+<body>
+    <div id="box">
+    		<ul v-bind:class="active" v-on:click.prevent>
+    			<li><a href="" v-on:click="onclick('home')" class="home">HOME</a></li>
+    			<li><a href="" v-on:click="onclick('price')" class="price">PRICE</a></li>
+    			<li><a href="" v-on:click="onclick('contect')" class="contect">CONTARCT</a></li>
+    			<li><a href="" v-on:click="onclick('saddd')" class="saddd">biznjx</a></li>
+    			<li><a href="" v-on:click="onclick('ddssdcs')" class="ddssdcs">CONTARCT</a></li>
+    			<li><a href="" v-on:click="onclick('pddadas')" class="pddadas">biznjx</a></li>
+    		</ul>
+    		{{active}}
+    </div>
+    <script src="vue.js"></script>
+    <script type="text/javascript">
+    	var app= new Vue({
+    		el:"#box",
+    		data:{
+    			active:'home'
+    		},
+            methods:{
+            	onclick:function(item){
+                  this.active=item;
+                  console.log(this.active);
+            	}
+            }
+    	})
+    </script>
+</body>
+</html>

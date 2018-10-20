@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue练习</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script src="vue.js"></script> 
+      <div id="app">
+      	    <p v-on:click="write">点我编辑</p>
+      	    <input type="text" v-model="content" v-if="show" >
+      	    <p>{{content}}</p>
+      </div>
+      <script type="text/javascript">
+      	   var app = new Vue({
+      	   	el:"#app",
+      	   	data:{
+               show:false,
+               content:''
+      	   	},
+      	   	methods:{
+                write:function () {
+                	this.show=true;
+                }
+      	   	}
+      	   })
+      </script>
+</body>
+</html>

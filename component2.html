@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	.color{
+     background: red;
+	}
+</style>
+<script src="vue.js"></script>
+<body>
+<div id="app">
+	<like></like>
+</div>
+<template id="btnt">
+	<button :class="{color:liked}" @click="onclick">点赞{{likeconunt}}</button>
+</template>
+<script type="text/javascript">
+	Vue.component('like',{
+        template:"#btnt",
+        data:function(){
+        	 return {
+        	 	likeconunt:0,
+        	 	liked:false
+        	 }
+        },
+        methods:{
+        	onclick:function(){
+        		if (!this.liked)
+        		      this.likeconunt++;
+        	    else
+        	    	this.likeconunt--;
+        	    this.liked=!this.liked;
+        	}     
+        }
+	})
+	new Vue({
+		el:'#app',
+	})
+</script>
+</body>
+</html>

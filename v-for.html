@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="vue.js"></script>
+</head>
+<body>
+<div id="app1">
+	<ul>
+		<li v-for="loop in looplist">{{loop}}</li>
+	</ul>
+</div>
+<script type="text/javascript">
+	var app1= new Vue({
+		el:"#app1",
+		data:{
+			looplist:['王','文','涛']
+		}
+	})
+</script>
+<div id="app2">
+	<ul>
+		<li v-for="food in foodlist">{{food.name}}:￥{{food.price}}</li>
+	</ul>
+</div>
+<script type="text/javascript">
+	var app2 = new Vue({
+		el:"#app2",
+		data:{
+			foodlist:[
+				{name:'蒜',price:10},
+				{name:'姜',price:2},
+				{name:'蒜',price:19}
+			]
+		}
+	})
+</script>
+<div id="app3">
+	<ol>
+		<li v-for="stu in stulist">学号：{{stu.id}}:姓名:{{stu.name}}:年龄:{{stu.age}}</li>
+	</ol>
+</div>
+<script type="text/javascript">
+	var app3 =new Vue({
+		el:"#app3",
+		data:{
+			stulist:[
+			   {id:1,name:'王文涛',age:19},
+			   {id:2,name:'张三',age:23},
+			   {id:3,name:'李四',age:39},
+			   {id:4,name:'白泣',age:100}
+			]
+		}
+	})
+</script>
+</body>
+</html>

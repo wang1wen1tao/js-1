@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<script src="vue.js"></script>
+<body>
+	<div id="app">
+		<bancas></bancas>
+	</div>
+<script type="text/javascript">
+	Vue.component('bancas',{
+       template:'<div><show @show_bacas="show_bacas"></show><div v-if="show">余额98￥</div></div>',
+       data:function(){
+       	return {
+       		show:false,
+       	}
+       },
+       methods:{
+       	show_bacas:function(data){
+       		this.show=true;
+       		console.log(data);
+       	}
+       }
+	});
+	Vue.component('show',{
+		template:'<button @click="onclick()">显示余额</button>',
+		methods:{
+			onclick(){
+				this.$emit('show_bacas',{a:1,b:2});
+			}
+		}
+	});
+	new Vue({
+		el:"#app"
+	})
+</script>
+</body>
+</html>
