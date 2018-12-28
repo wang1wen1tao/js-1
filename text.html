@@ -1,31 +1,118 @@
 <!DOCTYPE html>
-<html>
-<!-- <head> -->
-	<title></title>
-	<meta charset="utf-8">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width" , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
+<style>
+    #box{
+        width: 60%;
+        margin: 0 auto;
+        position: relative;
+    }
+    #box div{
+        width: 10rem;
+        height: 10rem;
+        background: orange;
+        position: absolute;
+        border-radius: 10px;
+    }
+    #box div:nth-of-type(1){
+        left: 0rem;
+        top: 0rem;
+    }
+    #box div:nth-of-type(2){
+        left: 11rem;
+        top:0rem;
+    }
+    #box div:nth-of-type(3){
+        left: 22rem;
+        top:0rem;
+    }
+    #box div:nth-of-type(4){
+        left: 0rem;
+        top:11rem;
+    }
+    #box div:nth-of-type(5){
+        left: 11rem;
+        top:11rem;
+    }
+    #box div:nth-of-type(6){
+        left: 22rem;
+        top:11rem;
+    }
+    #box div:nth-of-type(4){
+        left: 0rem;
+        top:11rem;
+    }
+    #box div:nth-of-type(5){
+        left: 11rem;
+        top:11rem;
+    }
+    #box div:nth-of-type(6){
+        left: 22rem;
+        top:11rem;
+    }
+    #box div:nth-of-type(4){
+        left: 0rem;
+        top:11rem;
+    }
+    #box div:nth-of-type(5){
+        left: 11rem;
+        top:11rem;
+    }
+    #box div:nth-of-type(6){
+        left: 22rem;
+        top:11rem;
+    }
+    #box div:nth-of-type(4){
+        left: 0rem;
+        top:11rem;
+    }
+    #box div:nth-of-type(5){
+        left: 11rem;
+        top:11rem;
+    }
+    #box div:nth-of-type(6){
+        left: 22rem;
+        top:11rem;
+    }
+    #box div:nth-of-type(6){
+        left: 22rem;
+        top:11rem;
+    }
+
+    #box div:nth-of-type(7){
+        left: 0rem;
+        top:22rem;
+    }
+    #box div:nth-of-type(8){
+        left: 11rem;
+        top:22rem;
+    }
+    #box div:nth-of-type(9){
+        left: 22rem;
+        top:22rem;
+    }
+   
+    
+</style>
+
 <body>
-	<div id="app">
-		<button @click="onclick()">{{value}}</button>
-	</div>
-	<template>
-		<div id="x-box" style="width: 200px,height:300px,background:red"></div>
-	</template>
-<script src="vue.js"></script>	
-<script type="text/javascript">
-	var app = new Vue({
-		el:"#app",
-		data:function(){
-			return {
-                value:'点赞'
-			}
-		},
-        methods:{
-        	onclick(){
-        		alert("axasxasxsa");
-        	}
-        }
-	})
-</script>
+    <div id="box">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 </body>
+
 </html>
