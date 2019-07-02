@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+  body{
+      display: flex;
+      justify-content: center;
+  }  
+  #container{
+      width: 400px;
+      height: 200px;
+      border: 1px solid #ccc;
+      position: relative;
+  }
+  .left,.right{
+      width: 50px;
+      height: 50px;
+      background: #ccc;
+      margin-top: 75px;
+      z-index:2;
+  }
+  .left{
+      float: left;
+  }
+  .right{
+      float:right;
+  }
+  .box{
+      width: 200px;
+      height: 200px;
+       
+  }
+</style>
+<body>
+    <div id="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
